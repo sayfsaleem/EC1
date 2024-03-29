@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'froala_editor',
     'client',
 ]
-WSGI_APPLICATION = 'EC.wsgi.WSGI_APPLICATION'
+WSGI_APPLICATION = 'EC.wsgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
