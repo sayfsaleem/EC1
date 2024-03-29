@@ -1,0 +1,134 @@
+{% extends "plate.html" %}
+{% load static %}
+{% block body %}
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <!-- xc-breadcrumb area start -->
+                <div class="xc-breadcrumb__area">
+                    <div class="xc-breadcrumb__bg w-img">
+                        <img src="{% static 'assets/img/backgroud/breadcrumb-bg.png' %}" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-12">
+                                <div class="xc-breadcrumb__content text-center p-relative z-index-1">
+                                    <h3 class="xc-breadcrumb__title">Contact Us</h3>
+                                    <div class="xc-breadcrumb__list">
+                                        <span><a href="#">Home</a></span>
+                                        <span class="dvdr">/</span>
+                                        <span>Contact Us</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- xc-breadcrumb area end -->
+
+                <!-- cta four start -->
+                <div class="xc-cta-four__section pt-150">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 wow xcfadeUp">
+                                <div class="xc-cta-four__box">
+                                    <div class="xc-cta-four__icon">
+                                        <span><i class="fa-light fa-phone"></i></span>
+                                    </div>
+                                    <h3 class="xc-cta-four__title">Phone Number</a>
+                                    </h3>
+                                    <p>
+                                        <a href="tel:+1-888-1234-5678">+1 (888) 1234-5678</a><br>
+                                        <a href="tel:+23-5535-68-68">(+23) 5535 68 68</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow xcfadeUp">
+                                <div class="xc-cta-four__box">
+                                    <div class="xc-cta-four__icon">
+                                        <span><i class="fa-light fa-envelope"></i></span>
+                                    </div>
+                                    <h3 class="xc-cta-four__title">Email Address</a>
+                                    </h3>
+                                    <p>
+                                        <a href="mailto:support@gmail.com">support@gmail.com</a><br>
+                                        <a href="mailto:xaito@help.com">xaito@exmple.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow xcfadeUp">
+                                <div class="xc-cta-four__box">
+                                    <div class="xc-cta-four__icon">
+                                        <span><i class="fa-light fa-location-dot"></i></span>
+                                    </div>
+                                    <h3 class="xc-cta-four__title">Office Location</a>
+                                    </h3>
+                                    <p> 121 King St, Melbourne VIC 3000, Australia </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cta four start -->
+
+
+                <div class="xc-contact-page__section pt-50 pb-90">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="xc-section__title-wrapper mb-30">
+                                    <h3 class="xc-section__title sm-title wow">Have any <br> questions for us?</h3>
+                                    <div class="xc-contact-img mt-40 mb-40">
+                                        <img src="{%static 'assets/img/resourse/contact-1.png'%}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="xc-contact-page__form">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="email" id="email" name="email" placeholder="Your Mail" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="xc-contact-page__input-box">
+                                                    <textarea cols="30" rows="10" id="message" name="message" placeholder="Write A Message" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="">
+                                                    <button type="submit" class="xc-btn">Send Message </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="result"></div>
+                                    <!-- /.result -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xc-map pb-120">
+                    <div class="container">
+                        <div class="row">
+                            <div class="xc-google-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                                    class="xc-google-map__one" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endblock body %}

@@ -1,0 +1,157 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  Main menu css
+/*----------------------------------------*/
+.main-menu {
+    & ul {
+        & li {
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            transition: .3s;
+
+            &+li {
+                margin-left: 50px;
+            }
+
+            & a {
+                display: inline-block;
+                font-size: 16px;
+                color: var(--xc-common-black);
+                padding: 33px 0;
+                font-weight: 700;
+                text-transform: capitalize;
+                font-family: var(--xc-ff-heading);
+                transition: .3s;
+
+            }
+            &.menu-item-has-children,
+            &.has-dropdown {
+                &>a {
+                    position: relative;
+
+                    &::after {
+                        content: '\f107';
+                        transform: translateY(1px);
+                        font-size: 14px;
+                        color: var(--xc-common-black);
+                        font-family: var(--xc-ff-fontawesome);
+                        font-weight: 400;
+                        margin-left: 5px;
+                        display: inline-block;
+                        transition: .3s;
+                    }
+                }
+            }
+
+            & .submenu {
+                padding: 20px 0;
+                display: inline-block;
+                margin: 0;
+                position: absolute;
+                top: 120%;
+                left: 0;
+                // height: 10px;
+                width: 230px;
+                background: var(--xc-common-white);
+                z-index: 99;
+                transition: .3s;
+                visibility: hidden;
+                opacity: 0;
+                box-shadow: 0px 4px 60px rgba(69, 105, 231, 0.15);
+                border-radius: 0px 0px 10px 10px;
+                border: 0px solid transparent;
+                transition:0.4s;
+                border-top: 2px solid var(--xc-theme-primary);
+                pointer-events: none;
+                & li {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    transition: .3s;
+                    &.menu-item-has-children,
+                    &.has-dropdown {
+                        &>a {
+                            &::after {
+                                position: absolute;
+                                top: 50%;
+                                right: 25px;
+                                transform: translateY(-50%) rotate(-90deg);
+                                transition: .3s;
+                            }
+                        }
+                    }
+
+                    & a {
+                        padding: 10px 50px;
+                        font-size: 13px;
+                        position: relative;
+                        z-index: 1;
+                        color: var(--xc-common-black);
+                        width: 100%;
+                        transition: .3s;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            top: 50%;
+                            left: 30px;
+                            width: 5px;
+                            height: 2px;
+                            background-color: var(--xc-theme-primary);
+                            z-index: -1;
+                            transition: .3s;
+
+                        }
+
+                    }
+
+                    & .submenu {
+                        left: 120%;
+                        top: 0;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        &>a {
+                            color: var(--xc-theme-primary);
+
+                            &::after {
+                                color: var(--xc-theme-primary);
+                            }
+
+                            &::before {
+                                width: 15px;
+                            }
+                        }
+
+                        &>.submenu {
+                            left: 100%;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                &>a {
+                    color: var(--xc-theme-primary);
+
+                    &::after {
+                        color: var(--xc-theme-primary);
+                        transform: rotate(-179deg);
+                    }
+                }
+
+                &>.submenu {
+                    top: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
+}

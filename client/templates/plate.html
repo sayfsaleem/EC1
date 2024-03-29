@@ -1,0 +1,414 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zxx">
+<head>
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<title>Xaito - AI Generator HTML Template</title>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- favicon -->
+<link href="{% static 'assets/elitechain-logo.png' %}" rel="shortcut icon" type="image/x-icon"/>
+<!-- CSS  here -->
+<link href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/mean-menu/meanmenu.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/odometer/odometer.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/animate/animate.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/swiper/swiper-bundle.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/owl-carousel/owl.theme.default.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/nice-select/nice-select.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/font-awesome-pro/css/fontawesome.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/vendors/spacing/spacing.css' %}" rel="stylesheet" type="text/css"/>
+<!-- main css  -->
+<link href="{% static 'assets/css/main.css' %}" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+        /* Default styles */
+
+        /* Styles for screens larger than 1200px (Desktop) */
+        @media screen and (min-width: 1200px) {
+
+            /* CSS code specific to desktop screens */
+            .modified-header {
+                max-width: 1219px !important;
+            }
+            .Smart{
+                width:20% !important;
+            }
+        }
+
+        /* Styles for screens between 992px and 1199px (Laptop) */
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            /* CSS code specific to laptop screens */
+        }
+
+        /* Styles for screens between 576px and 991px (Mobile) */
+        @media screen and (min-width: 576px) and (max-width: 991px) {
+            /* CSS code specific to mobile screens */
+        }
+
+        /* Styles for screens smaller than 576px (Small Mobile) */
+        @media screen and (max-width: 575px) {
+            /* CSS code specific to small mobile screens */
+        }
+    </style>
+</head>
+<body>
+<!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+<div class="xc-page-wrapper">
+<!-- xc-header-one area start -->
+<header>
+<div class="xc-header-one__header theme-bg-3">
+<!-- main header start  -->
+<div class="xc-header-one__main" id="xc-header-sticky">
+<div class="container modified-header">
+<div class="xc-header-one__main-wrapper">
+<div class="xc-header-one__left">
+<div class="xc-header-one__logo xc-disabled-dark">
+<a href="index.html"><img alt="logo" src="{% static 'assets/Elitechain-dark.png' %}"/></a>
+</div>
+<div class="xc-header-one__logo xc-enable-dark">
+<a href="index.html"><img alt="logo" src="{% static 'assets/Elitechain-light.png' %}"/></a>
+</div>
+</div>
+<div class="xc-header-one__right">
+<div class="xc-header-one__right-menu d-flex flex-wrap justify-content-between align-items-center">
+<div class="main-menu d-none d-xl-block">
+<nav id="mobile-menu">
+<ul class="ul-0">
+<li>
+<a href="/">Home</a>
+</li>
+<li class="has-dropdown">
+<a>Services</a>
+<ul class="submenu">
+ {% for service_name, service_slug in services %}
+<li><a href="{% url 'Service' service_slug %}">{{ service_name }}</a></li>
+{% endfor %}
+</ul>
+</li>
+<li class="has-dropdown">
+<a>Industries</a>
+<ul class="submenu">
+ {% for industries_name, industries_slug in industries1 %}
+<li><a href="{% url 'Industry' industries_slug %}">{{ industries_name }}</a></li>
+{% endfor %}
+</ul>
+</li>
+<li class="has-dropdown">
+<a>Case Studies</a>
+<ul class="submenu">
+ {% for cases1a in cases1 %}
+<li><a href="{% url 'Case' cases1a.slug %}">{{ cases1a.name }}</a></li>
+{% endfor %}
+</ul>
+</li>
+<li>
+<a href="/careers/">Careers</a>
+</li>
+<li><a href="/about/">About</a></li>
+</ul>
+</nav>
+</div>
+<div class="xc-header-one__right-btn d-none d-md-flex">
+<button class="xc-dark-swich">
+<i class="moon fa-light fa-moon"></i>
+<i class="sun fa-light fa-sun-bright"></i>
+</button>
+<div class="xc-header-bnt-1">
+<a class="xc-border-btn" href="/contact/">Contact</a>
+</div>
+<!-- <div class="xc-header-bnt-2">
+                                            <a href="/about/" class="xc-btn">Let's Start</a>
+                                        </div> -->
+</div>
+<!-- mobile drawer  -->
+<div class="xc-header-one__hamburger ml-50 d-xl-none">
+<button class="xc-hamburger-btn xc-offcanvas-open-btn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--main-header end  -->
+</div>
+</header>
+<div id="xc-cursor">
+<div class="xc-cursor__circle"></div>
+</div>
+<!-- xc-body overlay -->
+<div class="xc-body-overlay">
+</div>
+<!-- xc-body overlay -->
+<!-- search  -->
+<div class="xc-search-popup open">
+<div class="xc-search-popup__overlay"></div>
+<!-- /.search-popup__overlay -->
+<div class="xc-search-popup__content">
+<form action="#">
+<input id="search" placeholder="Search Here..." type="text"/>
+<button aria-label="search submit" class="xc-search-popup-btn" type="submit">
+<span><i class="fa-light fa-magnifying-glass"></i></span>
+</button>
+</form>
+</div>
+<!-- /.search-popup__content -->
+</div>
+<!-- /.search-popup -->
+<div class="xc-back-to-top-wrapper xc-back-to-top-btn-show">
+<button class="xc-back-to-top-btn" id="xc_back-to-top" type="button">
+<svg fill="none" height="7" viewbox="0 0 12 7" width="12" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 6L6 1L1 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</div>
+<style>
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* Apply the animation to the element */
+            .xc-preloader__image {
+                animation: spin 2s linear infinite;
+                /* Adjust the duration and timing function as needed */
+            }
+        </style>
+<div class="xc-preloader">
+<div class="xc-preloader__image" data-background="{% static 'assets/loading-elitechain-logo.png' %}"></div>
+</div>
+<div class="xc-mobile-nav__wrapper">
+<div class="xc-mobile-nav__overlay xc-mobile-nav__toggler"></div>
+<!-- /.mobile-nav__overlay -->
+<div class="xc-mobile-nav__content">
+<span class="xc-mobile-nav__close xc-mobile-nav__toggler"><i class="fa fa-times"></i></span>
+<div class="logo-box">
+<a href="index.html"><img alt="" src="{% static 'assets/img/logo/white-logo.png' %}" width="150"/></a>
+</div>
+<!-- /.logo-box -->
+<div class="xc-mobile-nav__menu"></div>
+<!-- /.mobile-nav__container -->
+<ul class="xc-mobile-nav__contact list-unstyled">
+<li>
+<i class="fa fa-envelope"></i>
+<a href="mailto:needhelp@packageName__.com">needhelp@corpai.com</a>
+</li>
+<li>
+<i class="fa fa-phone-alt"></i>
+<a href="tel:666-888-0000">666 888 0000</a>
+</li>
+</ul>
+<!-- /.mobile-nav__contact -->
+<div class="xc-mobile-nav__top">
+<div class="xc-mobile-nav__social">
+<a class="fab fa-twitter" href="#"></a>
+<a class="fab fa-facebook-square" href="#"></a>
+<a class="fab fa-pinterest-p" href="#"></a>
+<a class="fab fa-instagram" href="#"></a>
+</div>
+<!-- /.mobile-nav__social -->
+</div>
+<!-- /.mobile-nav__top -->
+</div>
+<!-- /.mobile-nav__content -->
+</div>
+<!-- /.mobile-nav__wrapper -->
+
+
+{% block body %}{% endblock body %}
+
+
+
+                <!-- cta one start -->
+<div class="xc-cta-two__section wow xcfadeUp">
+<div class="container">
+<div class="xc-cta-two__inner theme-bg p-relative z-1 include-bg" data-background="{% static 'assets/img/shapes/cta-shape-2.png' %}">
+<div class="row align-items-center">
+<div class="col-md-8">
+<div class="xc-cta-two__content">
+<div class="xc-cta-two__icon">
+<img alt="" src="{% static 'assets/img/icons/fun-6.png' %}"/>
+</div>
+<div class="xc-cta-two__title-wraper">
+<h3 class="xc-cta-three__title">Level up with Elitechain LLC</h3>
+<p>Elevating businesses, executing ideas, delivering swift experiences.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="xc-cta-two__btn mb-10">
+<a class="xc-btn xc-black-btn" href="#">Get Started Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- cta one end  -->
+<!-- footer start  -->
+<footer class="xc-footer-one__section style-2 black-footer pt-100 footer-bg">
+<div class="container">
+<div class="xc-footer-one__top pb-60">
+<div class="row">
+<div class="col-lg-3 col-6 Smart">
+<div class="xc-footer__widget mb-30">
+<div class="xc-footer__widget-about">
+<div class="xc-footer__widget-logo xc-disabled-dark">
+<a href="index.html"><a href="index.html"><img alt="logo" src="{% static 'assets/Elitechain-light.png' %}"/></a>
+</a></div>
+<div class="xc-footer__widget-logo xc-enable-dark">
+<a href="index.html"><img alt="" src="{% static 'assets/Elitechain-light.png' %}"/></a>
+</div>
+<div class="xc-footer__widget-social">
+<a href="#"><span><i class="fab fa-facebook-f"></i></span></a>
+<a href="#"><span><i class="fab fa-twitter"></i></span></a>
+<a href="#"><span><i class="fab fa-linkedin-in"></i></span></a>
+<a href="#"><span><i class="fab fa-youtube"></i></span></a>
+</div>
+<p class="xc-footer__widget-info">© Elitechain LLC.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-6 Smart">
+    <div class="xc-footer__widget mb-30">
+        <h3 class="xc-footer__widget-title">Links</h3>
+        <div class="xc-footer__widget-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/careers/">Careers</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-6 Smart">
+    <div class="xc-footer__widget mb-30">
+        <h3 class="xc-footer__widget-title">Services</h3>
+        <div class="xc-footer__widget-nav">
+            <ul>
+                {% for service_name, service_slug in services %}
+                <li><a href="{% url 'Service' service_slug %}">{{ service_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-6 Smart">
+    <div class="xc-footer__widget mb-30">
+        <h3 class="xc-footer__widget-title">Industries</h3>
+        <div class="xc-footer__widget-nav">
+            <ul>
+                {% for industries_name, industries_slug in industries1 %}
+                <li><a href="{% url 'Industry' industries_slug %}">{{ industries_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-6 Smart">
+    <div class="xc-footer__widget mb-30">
+        <h3 class="xc-footer__widget-title">Case Studies</h3>
+        <div class="xc-footer__widget-nav">
+            <ul>
+                {% for cases1a in cases1 %}
+                <li><a href="{% url 'Case' cases1a.slug %}">{{ cases1a.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="xc-footer-one__copyright has-border">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<p class="xc-footer-two__copyright-text text-center">Elitechain LLC 2024.All Rights
+Reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- footer end  -->
+</div>
+
+
+<!-- JS here -->
+<script src="{% static 'assets/vendors/jquery/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendors/mean-menu/meanmenu.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-appear/appear.min.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-migrate/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'assets/vendors/odometer/odometer.min.js' %}"></script>
+<script src="{% static 'assets/vendors/animaiton-headline/animation-headline.js' %}"></script>
+<script src="{% static 'assets/vendors/swiper/swiper-bundle.js' %}"></script>
+<script src="{% static 'assets/vendors/gsap/gsap.min.js' %}"></script>
+<script src="{% static 'assets/vendors/gsap/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'assets/vendors/gsap/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'assets/vendors/gsap/ScrollSmoother.min.js' %}"></script>
+<script src="{% static 'assets/vendors/nice-select/nice-select.min.js' %}"></script>
+<script src="{% static 'assets/vendors/swiper/swiper-bundle.js' %}"></script>
+<script src="{% static 'assets/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/vendors/magnific-popup/magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-wow/wow.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-isotope/isotope.js' %}"></script>
+<script src="{% static 'assets/vendors/tilt/tilt.js' %}"></script>
+<script src="{% static 'assets/vendors/jquery-imagesloaded/imagesloaded.js' %}"></script>
+<script src="{% static 'assets/vendors/ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+<!-- main js -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script>
+        // Function to generate a random discount code
+        function generateDiscountCode(length) {
+            var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            var code = '';
+            for (var i = 0; i < length; i++) {
+                code += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return code;
+        }
+
+        // Function to decide whether to show the discount message based on a 20% probability
+        function shouldShowDiscount() {
+            return Math.random() <= 0.2;
+        }
+
+        // Main function to display the discount message with the random code
+        function displayDiscount() {
+            if (shouldShowDiscount()) {
+                var discountCode = generateDiscountCode(8);
+                document.getElementById('discount-code').innerText = discountCode;
+                document.getElementById('discount-message').style.display = 'block';
+            } else {
+                // Optionally, you can display a message indicating no discount here
+                console.log("Sorry, no discount this time!");
+            }
+        }
+
+        // Call the main function to display the discount message
+        displayDiscount();
+    </script>
+    <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js" data-account-id="208405793"></script>
+</body>
+</html>
+

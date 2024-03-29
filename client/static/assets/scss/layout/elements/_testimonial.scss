@@ -1,0 +1,75 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Testimonial css
+/*----------------------------------------*/
+
+.xc-testimonial-one {
+    &__item {
+        background-color: #F3F5F8;
+        padding: 36px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    &__img {
+        margin-right: 20px;
+    }
+
+    &__avata {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        & img {
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        & h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--xc-theme-common);
+        }
+
+        & p {
+            font-size: 16px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    &__ratting {
+        margin-bottom: 8px;
+        & span {
+            color: #FFCC29;
+        }
+    }
+
+    &__review {
+        font-size: 18px;
+    }
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: var(--xc-theme-primary);
+}
+
+.xc-testimonials-one__carousel {
+    &.owl-carousel .owl-item img {
+        width: inherit;
+    }
+
+    @media #{$lg} {
+        text-align: center;
+    }
+}
+
+.xc-testimonial-two__section {
+    padding-top: 220px;
+    margin-top: -100px;
+}

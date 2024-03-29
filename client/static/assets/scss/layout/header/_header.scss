@@ -1,0 +1,172 @@
+@use '../../utils' as *;
+
+/*--------------------------------------------------------------
+# Header Css Start
+------------------- -------------------------------------------*/
+
+// header one 
+.xc-header-transparen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    background-color: transparent;
+    &.xc-white {
+        top: 30px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            top: 5px;
+        }
+
+        & .xc-header-one__main-wrapper {
+            background-color: var(--xc-common-white);
+            padding-left: 30px;
+            padding-right: 30px;
+            
+            @media #{$lg,$md,$sm,$xs} {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        & .xc-header-sticky {
+            & .xc-header-one__main-wrapper {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.xc-header-one__main {
+    @media #{$xs,$sm,$md,$lg} {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+.xc-header-one__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 88;
+    background-color: var(--xc-common-white);
+    &.xc-header-transparen{
+        background-color: transparent;
+       
+    }
+    &.theme-bg-3 {
+        background-color: rgb(242, 243, 243);
+    }
+}
+
+.xc-header-one__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & p {
+        color: var(--xc-common-white);
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+}
+
+.xc-header-one__main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.xc-header-one__right-btn {
+    & .xc-border-btn {
+        margin-right: 10px;
+    }
+}
+
+.xc-header-one__right-menu {
+    & .main-menu {
+        margin-right: 87px;
+
+        @media #{$xl} {
+            margin-right: 60px;
+        }
+    }
+}
+
+.xc-header-one__right-cta-icons {
+    & span {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        border: 2px solid var(--xc-border-1);
+        transition: .3s;
+
+        &+span {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            border-color: var(--xc-theme-primary);
+            color: var(--xc-theme-primary);
+        }
+
+        & i {
+            font-weight: 500;
+        }
+
+    }
+
+}
+
+/* logo */
+.xc-header-one__logo {
+    position: relative;
+}
+
+.xc-header-one__logo {
+    & img {
+        @media #{$xs,$sm,$md} {
+            width: 150px;
+        }
+    }
+}
+
+
+
+
+// sticky header 
+
+.xc-header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--xc-common-white);
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.09);
+    z-index: 91;
+}
+
+.xc-header-one__main.xc-header-sticky {
+    & .xc-header-one__right-cta {
+        display: none !important;
+    }
+
+    & .xc-header-one__logo::after {
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.xc-header-two__main.xc-header-sticky {
+    background-color: var(--xc-common-black);
+}

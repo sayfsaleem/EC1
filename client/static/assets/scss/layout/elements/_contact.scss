@@ -1,0 +1,41 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Contact css
+/*----------------------------------------*/
+.xc-google-map__one {
+    width: 100%;
+    height: 500px;
+}
+
+.xc-contact-page {
+    &__input-box {
+        margin-bottom: 30px;
+
+        & input {
+            border-radius: 3px;
+            border: 1px solid #D2D2D2;
+            background: var(--xc-common-white);
+        }
+
+        & textarea {
+            min-height: 170px;
+            border-radius: 3px;
+            border: 1px solid #D2D2D2;
+            background: var(--xc-common-white);
+        }
+
+        & button {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.xc-contact-img {
+    & img {
+        @media #{$xs,$sm,$md} {
+            width: 100%;
+        }
+    }
+}

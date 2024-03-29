@@ -1,0 +1,145 @@
+{% extends "plate.html" %}
+{% load static %}
+{% block body %}
+{% load i18n %}
+<!-- xc-breadcrumb area end -->
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        <!-- xc-breadcrumb area start -->
+        <!-- xc-breadcrumb area start -->
+        <div class="xc-breadcrumb__area">
+            <div class="xc-breadcrumb__bg w-img">
+                <img alt="" src="{% static 'assets/img/backgroud/breadcrumb-bg.png' %}" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="xc-breadcrumb__content text-center p-relative z-index-1">
+                            <h3 class="xc-breadcrumb__title">{{case.name}}</h3>
+                            <div class="xc-breadcrumb__list">
+                                <span><a href="/">Home</a></span>
+                                <span class="dvdr">/</span>
+                                <span>{{case.name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- xc-postbox area start -->
+        <div class="xc-postbox__area xc-postbox__single pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="xc-postbox__wrapper mb-50">
+                            <article class="xc-postbox__item pb-50">
+                                <div class="xc-postbox__thumb w-img mb-20">
+                                    <img alt="" src="/media/{{case.image}}" />
+                                </div>
+                                <div class="xc-postbox__content">
+                                    <div class="xc-postbox__meta">
+                                        <span><i class="fal fa-calendar-check"></i> {{case.date}} </span>
+                                        <span><a href="#"><i class="fa-light fa-user"></i> Elitechain LLC.</a></span>
+                                        <a href="#"><i class="fa-light fa-star"></i>
+                                            {% for tag in case.tags.all %}
+                                            {{ tag.tag_name }}
+                                            {% if not forloop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </a>
+                                    </div>
+                                    <h1 class="xc-postbox__title">{{case.title}}</h1>
+                                    <div class="xc-postbox__text">
+                                        <blockquote>
+                                            <p>{{case.core_line}}</p><cite>Elitechain LLC.</cite>
+                                        </blockquote>
+                                        <p>{{ case.description|safe }}</p>
+                                    </div>
+                                    <div class="xc-postbox-tag__wrapper">
+                                        <div class="xc-postbox__cats catscloud">
+                                            <span>Case :  </span>
+                                            <a href="#">{{case.name}}</a>
+                                        </div>
+                                        <div class="xc-postbox__tags tagcloud">
+                                            <span>Tags:</span>
+                                            {% for tag in case.tags.all %}
+                                            <a href="#">{{ tag.tag_name }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-lg-4">
+                        <div class="xc-sidebar__wrapper">
+                            <div class="xc-sidebar__widget">
+                                <h3 class="xc-sidebar__widget-title">More Services</h3>
+                                <div class="xc-sidebar__widget-content">
+                                    <ul class="pl-0 mb-0">
+                                        {% for service_name, service_slug in services %}
+                                        <li><a href="{% url 'Service' service_slug %}">{{service_name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="xc-sidebar__widget">
+                                <h3 class="xc-sidebar__widget-title">Related Industries</h3>
+                                <div class="xc-sidebar__widget-content">
+                                    <div class="xc-sidebar__post">
+                                        {% for industry in industries %}
+                                        <div class="rc__post d-flex align-items-center">
+                                            <div class="rc__post-thumb">
+                                                <a href="
+                      {% with slug_name=industry.name|slugify %}
+                        /industry/{{ slug_name }}
+                        {% endwith %}
+                    "><img alt="" src="/media/{{industry.square_image}}" /></a>
+                                            </div>
+                                            <div class="rc__post-content">
+                                                <h3 class="rc__post-title">
+                                                    <a href="
+                         {% with slug_name=industry.name|slugify %}
+                        /industry/{{ slug_name }}
+                        {% endwith %}
+                        ">{{industry.name}}</a>
+                                                </h3>
+                                                <div class="rc__meta">
+                                                    <span><i class="fa-light fa-book"></i>Elitechain LLC.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xc-sidebar__widget">
+                                <h3 class="xc-sidebar__widget-title">Recent CaseStudies</h3>
+                                {% for cases in case_studies %}
+                                <div class="xc-sidebar__widget-content">
+                                    <div class="xc-sidebar__post">
+                                        <div class="rc__post d-flex align-items-center">
+                                            <div class="rc__post-thumb">
+                                                <a href="/case/{{cases.slug}}"><img alt=""
+                                                        src="/media/{{cases.square_image}}/" /></a>
+                                            </div>
+                                            <div class="rc__post-content">
+                                                <h3 class="rc__post-title">
+                                                    <a href="/case/{{cases.slug}}">{{cases.name}}</a>
+                                                </h3>
+                                                <div class="rc__meta">
+                                                    <span><i class="fa-light fa-clock"></i>{{cases.date}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- xc-postbox area end -->
+
+        {% endblock body %}

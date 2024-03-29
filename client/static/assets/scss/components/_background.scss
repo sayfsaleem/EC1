@@ -1,0 +1,45 @@
+@use '../utils' as *;
+/*--------------------------------------------------------------
+# Background 
+------------------- -------------------------------------------*/
+.grey-bg {
+	background-color: var(--xc-grey-1);
+}
+.grey-bg-2 {
+	background-color: var(--xc-grey-2);
+}
+
+.white-bg {
+	background-color: var(--xc-common-white);
+}
+
+.black-bg {
+	background-color: var(--xc-common-black);
+}
+.footer-bg {
+	background-color: #081422;
+}
+.footer-bg-2 {
+	background-color: #F3F5F8;
+}
+.theme-bg {
+	background-color: var(--xc-theme-primary);
+}
+.theme-bg-2 {
+	background-color: #F8F7FC ;
+}
+.theme-bg-3 {
+	background-color: #F2F3F3 ;
+}
+.theme-bg-4 {
+	background-color: #F3F5F8 ;
+}
+.theme-bg-5 {
+	background-color: #F2F4F8 ;
+}
+.theme-bg-6 {
+	background-color: #11192A ;
+}
+.theme-bg-7 {
+	background-color: #3D369D ;
+}

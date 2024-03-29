@@ -1,0 +1,26 @@
+@use './mixins' as *;
+
+
+.xc-transition-common{
+	@include xc-transition();
+}
+
+.xc-transition-color{
+	@include xc-transition(color);
+}
+
+.xc-transition-transform{
+	@include xc-transition(transform);
+}
+
+.xc-transition-border-color{
+	@include xc-transition(border-color);
+}
+
+.xc-transition-bg-color{
+	@include xc-transition(backgroud-color);
+}
+
+.xc-transition-fz{
+	@include xc-transition(font-size);
+}

@@ -1,0 +1,141 @@
+{% extends "plate.html" %}
+{% load static %}
+{% block body %}
+        <!-- /.mobile-nav__wrapper -->
+<div id="smooth-wrapper">
+<div id="smooth-content">
+<!-- xc-breadcrumb area start -->
+<div class="xc-breadcrumb__area">
+<div class="xc-breadcrumb__bg w-img">
+<img alt="" src="{% static 'assets/img/backgroud/breadcrumb-bg.png' %}"/>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-xxl-12">
+<div class="xc-breadcrumb__content text-center p-relative z-index-1">
+<h3 class="xc-breadcrumb__title">{{Job.name}}</h3>
+<div class="xc-breadcrumb__list">
+<span><a href="#">Home</a></span>
+<span class="dvdr">/</span>
+<span><a href="/careers/">Careers</a></span>
+<span class="dvdr">/</span>
+<span>{{Job.name}}</span>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- xc-breadcrumb area end -->
+<!-- service area start -->
+<section class="service__area pt-120 pb-30">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<div class="xc-service-details__left mb-90">
+<div class="xc-service-details__img w-img">
+<img alt="" src="{% static 'assets/img/resourse/service-details.jpg' %}"/>
+</div>
+<h2>{{Job.name}}</h2>
+<p>{{Job.details | safe}}</p>
+                <div class="xc-contact-page__section pt-50 pb-90">
+                    <div class="container">
+                        <div class="row">
+                                <div class="xc-contact-page__form">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="email" id="email" name="email" placeholder="Your Mail" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="xc-contact-page__input-box">
+                                                    <input type="text" id="subject" name="number" placeholder="Phone Number" required>
+                                                </div>
+                                            </div>
+                                             <div class="col-12">
+                                                <div class="xc-contact-page__input-box">
+                                                    <h4>Cover Letter</h4>
+                                                    <input type="file" id="subject" name="cover_letter" placeholder="Phone Number" required>
+                                                </div>
+                                            </div>
+                                             <div class="col-12">
+                                                <div class="xc-contact-page__input-box">
+                                                    <h4>Resume</h4>
+                                                    <input type="file" id="subject" name="resume" placeholder="Phone Number" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="">
+                                                    <button type="submit" class="xc-btn">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="result"></div>
+                                    <!-- /.result -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+</div>
+<div class="col-lg-4 order-lg-first">
+<div class="xc-service-details__right">
+<div class="xc-service-details__right-content">
+<h3 class="xc-service-details__sidebar-title">Quick Details:</h3>
+<p>{{Job.short_detail}}</p>
+</div>
+
+<div class="xc-service-details__meta flex-wrap mb-40">
+<div class="xc-service-details__meta-item d-flex align-items-start">
+<div class="xc-service-details__meta-icon">
+<span class="xc-icon"><i class="fa-thin fa-user-tie"></i></span>
+</div>
+<div class="xc-service-details__meta-content">
+<h5>Location:</h5>
+<span>{{Job.location}}</span>
+</div>
+</div>
+<div class="xc-service-details__meta-item d-flex align-items-start">
+<div class="xc-service-details__meta-icon">
+<span class="xc-icon"><i class="fa-thin fa-award"></i></span>
+</div>
+<div class="xc-service-details__meta-content">
+<h5>Last Date:</h5>
+<span>{{Job.date}}</span>
+</div>
+</div>
+<div class="xc-service-details__meta-item d-flex align-items-start">
+<div class="xc-service-details__meta-icon">
+<span><i class="fa-light fa-tag"></i></span>
+</div>
+<div class="xc-service-details__meta-content">
+<h5>Related Niches:</h5>
+<span>
+  {% for tag in Job.tags.all %}
+        {{ tag.tag_name }}
+                  {% if not forloop.last %}<br> {% endif %}
+                            {% endfor %}
+</span>
+</div>
+</div>
+</div>
+<div class="xc-service-details__info-btn">
+<a class="xc-btn w-100 text-center" href="/contact/">Contact Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- service area end -->
+{% endblock body %}

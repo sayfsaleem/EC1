@@ -1,0 +1,86 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/* Gallery css
+/*----------------------------------------*/
+
+.xc-gallery-one {
+    &__item{
+        & img {
+            border-radius: 10px;
+        }
+    }
+    &__filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        text-align: center;
+        text-align: center;
+        padding-left: 0;
+        gap: 10px;
+        margin-bottom: 30px;
+        & li {
+            display: inline-block;
+            list-style: none;
+            @media #{$xs,$sm} {
+                display: block;
+            }
+            & .filter-text {
+                color: var(--xc-common-black);
+                cursor: pointer;
+                padding: 5px 25px;
+                border-radius: 100px;
+               
+                box-shadow: 0px 0px 120px 0px rgba(78, 67, 250, 0.28);
+                border: 1px solid var(--xc-theme-primary);
+                position: relative;
+                background-color: transparent;
+                z-index: 1;
+                display: inline-block;
+                overflow: hidden;
+                transition: .3s;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 0;
+                    left: -5px;
+                    border: 1px solid var(--xc-theme-primary);
+                    display: inline-block;
+                    background-color: var(--xc-theme-primary);
+                    border-radius: 100px;
+                    z-index: -1;
+                    transition: .3s;
+                }
+            }
+
+            &:hover {
+                & .filter-text {
+                    color: var(--xc-common-white);
+
+                    &::before {
+                        width: 120%;
+                    }
+                }
+            }
+
+            &.active {
+                & .filter-text {
+                    background-color: var(--xc-theme-primary);
+                    color: var(--xc-common-white);
+                }
+            }
+
+            &+li {
+                margin-left: 20px;
+                @media #{$xs,$sm} {
+                    margin-left: 0;
+                }
+
+            }
+        }
+    }
+}

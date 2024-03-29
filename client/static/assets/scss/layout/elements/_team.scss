@@ -1,0 +1,91 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Team css
+/*----------------------------------------*/
+
+.xc-team-one {
+    &__item {
+        border-radius: 10px;
+        border: 1px solid #CAC6FD;
+        background: #FFF;
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        &:hover {
+            & .xc-team-one {
+                &__img {
+                    & img {
+                        transform: scale(1.1);
+                    }
+                    &::after{
+                        opacity: .5;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+        width: 146px;
+        height: 146px;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        & img {
+            border-radius: 50%;
+            transition: .3s;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: rgba($color: var(--xc-theme-primary-rgb), $alpha: .4);
+            top: 0;
+            bottom: 0;
+            width: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            transition: .3s;
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        font-size: 18px;
+        margin-top: 20px;
+        & a {
+            transition: .3s;
+
+            &:hover {
+                color: var(--xc-theme-primary);
+            }
+        }
+    }
+    &__bio {
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+    &__social {
+        & a {
+            font-size: 12px;
+            transition: .3s;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 5px;
+            background-color: var(--xc-theme-primary);
+            color: var(--xc-common-white);
+            border-radius: 10px;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 0;
+            display: inline-block;
+            &:hover {
+                background-color:var(--xc-common-black);
+            }
+        }
+
+    }
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+{%load static%}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{message_name}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+
+    <!-- CSS  here -->
+    <link href="{% static 'assets/elitechain-logo.png' %}" rel="shortcut icon" type="image/x-icon" />
+    <!-- CSS  here -->
+    <link href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/mean-menu/meanmenu.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/odometer/odometer.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/animate/animate.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/swiper/swiper-bundle.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/owl-carousel/owl.theme.default.min.css' %}" rel="stylesheet"
+        type="text/css" />
+    <link href="{% static 'assets/vendors/nice-select/nice-select.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/vendors/font-awesome-pro/css/fontawesome.min.css' %}" rel="stylesheet"
+        type="text/css" />
+    <link href="{% static 'assets/vendors/spacing/spacing.css' %}" rel="stylesheet" type="text/css" />
+    <!-- main css  -->
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- /.mobile-nav__wrapper -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- xc-breadcrumb area start -->
+            <div class="xc-breadcrumb__area">
+                <div class="xc-breadcrumb__bg w-img">
+                    <img src="{%static 'assets/img/backgroud/breadcrumb-bg.png'%}" alt="">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-12">
+                            <div class="xc-breadcrumb__content text-center p-relative z-index-1">
+                                <h3 class="xc-breadcrumb__title">{{message_name}}</h3>
+                                <div class="xc-breadcrumb__list">
+                                    <span><a href="/">Home</a></span>
+                                    <span class="dvdr">/</span>
+                                    <span>{{message_name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- xc-breadcrumb area end -->
+
+            <!-- xc-error area start -->
+            <section class="xc-error__section xc-error__bg pt-110 pb-110">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-10">
+                            <div class="xc-error__wrapper p-relative z-index-1 text-center">
+
+                                <div class="xc-error__thumb w-img">
+                                    <img src="{%static 'assets/img/resourse/404.png'%}" alt="">
+                                </div>
+                                <div class="xc-error__content">
+                                    <h3 class="xc-error__title">{{message_title}}</h3>
+                                    <p>{{message_description}}</p>
+                                    </p>
+                                    <a href="/" class="xc-btn">
+                                        Back to Home
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- xc-error area end -->
+
+            <!-- cta one start -->
+
+
+            <script src="{% static 'assets/vendors/jquery/jquery-3.6.0.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/mean-menu/meanmenu.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-appear/appear.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-migrate/jquery-migrate.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/odometer/odometer.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/animaiton-headline/animation-headline.js' %}"></script>
+            <script src="{% static 'assets/vendors/swiper/swiper-bundle.js' %}"></script>
+            <script src="{% static 'assets/vendors/gsap/gsap.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/gsap/ScrollTrigger.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/gsap/ScrollToPlugin.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/gsap/ScrollSmoother.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/nice-select/nice-select.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/swiper/swiper-bundle.js' %}"></script>
+            <script src="{% static 'assets/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/magnific-popup/magnific-popup.min.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-wow/wow.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-isotope/isotope.js' %}"></script>
+            <script src="{% static 'assets/vendors/tilt/tilt.js' %}"></script>
+            <script src="{% static 'assets/vendors/jquery-imagesloaded/imagesloaded.js' %}"></script>
+            <script src="{% static 'assets/vendors/ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+            <!-- main js -->
+            <script src="{% static 'assets/js/main.js' %}"></script>
+            <script>
+                // Function to generate a random discount code
+                function generateDiscountCode(length) {
+                    var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                    var code = '';
+                    for (var i = 0; i < length; i++) {
+                        code += characters.charAt(Math.floor(Math.random() * characters.length));
+                    }
+                    return code;
+                }
+
+                // Function to decide whether to show the discount message based on a 20% probability
+                function shouldShowDiscount() {
+                    return Math.random() <= 0.2;
+                }
+
+                // Main function to display the discount message with the random code
+                function displayDiscount() {
+                    if (shouldShowDiscount()) {
+                        var discountCode = generateDiscountCode(8);
+                        document.getElementById('discount-code').innerText = discountCode;
+                        document.getElementById('discount-message').style.display = 'block';
+                    } else {
+                        // Optionally, you can display a message indicating no discount here
+                        console.log("Sorry, no discount this time!");
+                    }
+                }
+
+                // Call the main function to display the discount message
+                displayDiscount();
+            </script>
+            <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js"
+                data-account-id="208405793"></script>
+
+</body>
+
+</html>
