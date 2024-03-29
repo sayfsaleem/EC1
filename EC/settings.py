@@ -15,7 +15,7 @@ SECRET_KEY = 'django-sssa$5n4fbty#85(g8+kzm=c_%bmch^k%qm4%^577#ym%#cuu-5(8sss'
 DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost','.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ["https://elitechain.up.railway.app/",]
+CSRF_TRUSTED_ORIGINS = ["https://elitechain.up.railway.app",]
 
 # Application definition
 
