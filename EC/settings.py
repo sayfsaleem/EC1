@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'EC.wsgi.app'
+WSGI_APPLICATION = 'EC.wsgi.WSGI_APPLICATION'
 
 
 # Database
@@ -86,7 +86,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'UFNOSWOpGdZMzFXxjbYZReIyKKUPbwOw',
         'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': 'postgres',
+        'PORT': '25726',
     }
 }
 
