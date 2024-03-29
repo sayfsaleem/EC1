@@ -14,5 +14,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'EC.settings')
 
 # Get the Django WSGI application
 WSGI_APPLICATION = get_wsgi_application()
-
+app=application
 # Wrap the Django application with WhiteNoise
