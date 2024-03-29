@@ -13,6 +13,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'EC.settings')
 
 # Get the Django WSGI application
-django_app = get_wsgi_application()
+django_application = get_wsgi_application()
 
 # Wrap the Django application with WhiteNoise
