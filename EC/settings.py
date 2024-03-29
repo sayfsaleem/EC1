@@ -40,9 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'froala_editor',
     'client',
-
-
 ]
+WSGI_APPLICATION = 'EC.wsgi.WSGI_APPLICATION'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
