@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+/*--------------------------------------------------------------
+# Error 404 Page
+------------------- -------------------------------------------*/
+.xc-error {
+    &__title {
+        font-size: 50px;
+        letter-spacing: -0.04em;
+
+        @media #{$xs} {
+            font-size: 30px;
+        }
+    }
+
+    &__content {
+        & p {
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 0 70px;
+            margin-bottom: 27px;
+
+            @media #{$xs} {
+                padding: 0;
+            }
+        }
+
+        & .tp-btn {
+            padding: 12px 26px;
+
+
+            &:hover {
+                background-color: var(--xc-common-black)
+            }
+        }
+    }
+}

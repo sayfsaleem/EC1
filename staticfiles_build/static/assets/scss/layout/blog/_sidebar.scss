@@ -1,0 +1,124 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Sidebar css
+/*----------------------------------------*/
+
+.xc-sidebar {
+    &__wrapper {
+        padding: 50px 30px;
+        background: var(--xc-common-white);
+        border: 1px solid #ededed;
+        border-radius: 10px;
+        box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.06);
+        @media #{$xs} {
+            padding: 50px 20px;
+        }
+    }
+
+    &__widget {
+        &+.xc-sidebar__widget {
+            margin-top: 50px;
+        }
+
+        &-title {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 35px;
+            margin-bottom: 30px !important;
+            &::after {
+                font-size: 20px;
+                left: -20px;
+                position: absolute;
+                top: 9px;
+                font-weight: 300;
+                font-family: var(--xc-ff-fontawesome);
+                color: var(--xc-theme-primary);
+                content: url("../img/shapes/sidebar-title.gif");
+                transform: translateY(-50%) scale(-0.5);
+            }
+        }
+
+        & ul {
+            & li {
+                list-style: none;
+                padding-left: 19px;
+                margin-bottom: 25px;
+                line-height: 1;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    font-size: 16px;
+                    color: var(--xc-text-1);
+                    position: relative;
+                    padding-left: 5px;
+                    transition: .3s;
+
+                    &::after {
+                        position: absolute;
+                        content: '\f101';
+                        left: -19px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        color: var(--xc-theme-primary);
+                        font-family: var(--xc-ff-fontawesome);
+                        font-size: 16px;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        color: var(--xc-theme-primary);
+
+                        &::after {
+                            color: var(--xc-theme-primary);
+                            left: -14px;
+                        }
+                    }
+                }
+
+                & ul {
+                    padding-left: 25px;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+
+    &__search {
+        position: relative;
+
+        & input {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background: #F2F4F8;
+            border: 0;
+            color: #111111;
+            padding: 0 25px;
+            text-transform: capitalize;
+            outline: none;
+            padding-top: 3px;
+            padding-right: 70px;
+        }
+
+        & button {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            height: 100%;
+            color: #111;
+            line-height: 60px;
+            border-radius: 0 7px 7px 0;
+            transition: .3s;
+
+            &:hover {
+                color: var(--xc-theme-primary);
+            }
+        }
+
+    }
+}

@@ -1,0 +1,50 @@
+@use '../utils' as *;
+/*--------------------------------------------------------------
+# Back to Top
+------------------- -------------------------------------------*/
+.xc-back-to-top-wrapper{
+	position: fixed;
+    right: 50px;
+    bottom: 0;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+
+	@media #{$xs}{
+		right: 20px;
+		bottom: 20px;
+	}
+	&.xc-back-to-top-btn-show{
+		visibility: visible;
+		opacity: 1;
+		bottom: 50px;
+	}
+}
+
+.xc-back-to-top-btn{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	background: var(--xc-theme-primary);
+	box-shadow: 0px 8px 16px rgba(3, 4, 28, 0.3);
+	color: var(--xc-common-white);
+	border-radius: 50%;
+	transition: .2s;
+
+	& svg{
+		@include transform(translateY(-2px));
+	}
+
+	&:hover{
+		@include transform(translateY(-4px));
+	}
+
+}

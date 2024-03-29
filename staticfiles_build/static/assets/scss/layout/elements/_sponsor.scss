@@ -1,0 +1,88 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Sponsor css
+/*----------------------------------------*/
+
+.xc-sponsor-one__carousel {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--xc-border-1);
+
+    &.owl-carousel .owl-item img {
+        width: unset;
+    }
+
+    &.owl-carousel .owl-stage-outer {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @media #{$xs,$sm,$md} {
+            padding-left: 0;
+            padding-right: 40px;
+
+            & .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.xc-sponsor-two__section {
+    & .xc-sponsor-one__carousel {
+        border: 1px solid var(--xc-border-1);
+    }
+}
+
+.xc-brand-one__count {
+    font-weight: 700;
+    font-size: 96px;
+    background: linear-gradient(270.27deg, #7AD0BD 25.57%, #407CB5 45.03%, #EF5277 57.97%, #F58244 70.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    @media #{$xs,$sm} {
+        font-size: 55px;
+    }
+
+}
+
+.xc-brand-one__title {
+    font-size: 42px;
+
+    @media #{$xs,$sm} {
+        font-size: 38px;
+    }
+}
+
+.style-2 .xc-brand-one__title {
+    font-size: 24px;
+}
+
+.xc-brand-one__item {
+    @media #{$md,$sm,$xs} {
+        margin-bottom: 30px;
+    }
+}
+
+.xc-sponsor-two {
+    &__item {
+        background-color: var(--xc-common-white);
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-shadow: 0px 0px 250px 0px rgba(78, 67, 250, 0.10);
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 62px;
+        margin-bottom: 50px;
+    }
+}

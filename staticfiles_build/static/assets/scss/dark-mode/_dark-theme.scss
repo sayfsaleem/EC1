@@ -1,0 +1,365 @@
+body.xc-dark-mode {
+    background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    color: #8ca9d3;
+
+    & .xc-disabled-dark {
+        display: none;
+    }
+
+    .xc-enable-dark {
+        display: inline-block;
+    }
+
+}
+
+.xc-dark-mode {
+
+
+    & p {
+        color: #8ca9d3;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--xc-common-white);
+    }
+
+    & .bg-white {
+        background-color: #181d2d !important;
+    }
+
+    & blockquote {
+        background: #181d2d !important;
+    }
+
+    & blockquote cite {
+        color: #8ca9d3;
+    }
+
+    .xc-border-btn {
+        color: var(--xc-common-white);
+
+    }
+
+    & .xc-black-btn {
+        background-color: var(--xc-theme-primary);
+
+        &:hover {
+            background-color: var(--xc-theme-secondary);
+        }
+    }
+
+    .xc-contact-page__input-box input,
+    .xc-contact-page__input-box textarea,
+    .xc-postbox__comment-input input,
+    .xc-postbox__comment-input textarea {
+        background: #181d2d !important;
+        color: #8ca9d3;
+    }
+
+    & .xc-header-one__header {
+        background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-header-transparen.xc-white .xc-header-one__main-wrapper {
+        background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .main-menu ul li a {
+        color: var(--xc-common-white);
+    }
+
+    & .main-menu ul li .submenu li a {
+        color: var(--xc-common-white);
+    }
+
+    & .main-menu ul li.menu-item-has-children>a::after,
+    .main-menu ul li.has-dropdown>a::after {
+        color: var(--xc-common-white);
+    }
+
+    div.main-menu ul li.current a::after {
+        color: var(--xc-theme-primary);
+    }
+
+    & .xc-header-sticky {
+        background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-btn {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-black-btn {
+        color: var(--xc-common-black);
+        color: var(--xc-common-white);
+
+        &:hover {
+            color: var(--xc-common-white);
+        }
+    }
+
+    & .xc-border-btn:hover {
+        color: var(--xc-common-white);
+
+    }
+
+    & .main-menu ul li .submenu {
+        background: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-header-one__top p {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-brand-one__item {
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    & .xc-testimonial-one__item {
+        background-color: #181d2d;
+    }
+
+    & .xc-service-one__box.xc-featured .xc-btn {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-price-one__item {
+        background-color: #181d2d;
+    }
+
+    & .xc-price-one__item.featured .xc-price-one__banner p {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-price-one__item.featured .xc-price-one__btn a {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-price-one__btn a {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-accrodion {
+        background-color: #181d2d;
+    }
+
+    & .xc-postbox__item.xc-grid {
+        background-color: #181d2d;
+        border-color: #181d2d;
+    }
+
+    & .footer-bg-2,
+    & .theme-bg-7,
+    & .theme-bg,
+    & .theme-bg-4,
+    & .theme-bg-3,
+    & .theme-bg-2 {
+        background-color: #181d2d;
+    }
+
+    & .xc-header-transparen,
+    & .theme-bg-3 {
+        background-color: transparent;
+    }
+
+    & .xc-funfact-one__img {
+        background-color: rgb(7, 19, 33);
+    }
+
+    & .theme-bg-5,
+    & .xc-service-three__item,
+    & .xc-feature-five__item,
+    & .xc-header-banner-2__section {
+        background: RGBA(14, 20, 36, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-service-three__item {
+        background-image: none !important;
+        background-color: RGBA(14, 20, 36, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-header-banner-three__section,
+    & .xc-header-banner__section,
+    & .xc-service-two__section {
+        background: none !important;
+    }
+
+    & .xc-header-banner__two-shape {
+        opacity: .1;
+    }
+
+    & .xc-service-one__box.xc-featured {
+        background-color: #181d2d;
+    }
+
+    & .xc-team-one__item,
+    & .xc-service-two__item,
+    & .xc-service-one__box {
+        background-color: #181d2d;
+    }
+
+    & .xc-price-one__tab-nav .xc-price-tab-slide {
+        background-color: #181d2d;
+    }
+
+    & .xc-price-one__tab-nav .nav-link {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-price-one__tab-nav .xc-price-tab-slide i {
+        background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+    }
+
+    & .xc-cta-one__tagline {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-service-one__box.xc-featured .xc-service-one__title a {
+        color: var(--xc-common-white);
+        background-image: linear-gradient(#8ca9d3, #8ca9d3), linear-gradient(#8ca9d3, #8ca9d3);
+
+        &:hover {
+            color: var(--xc-theme-primary);
+        }
+    }
+
+    & .xc-service-one__box.xc-featured .xc-service-one__icon {
+        padding-bottom: 10px;
+    }
+
+    & .xc-about-one__feature-list p a {
+        color: #8ca9d3;
+
+        &:hover {
+            color: var(--xc-common-white);
+        }
+    }
+
+    & .xc-cta-one__checklist span {
+        color: #8ca9d3;
+    }
+
+    & .xc-header-banner__video a {
+        background-color: var(--xc-common-black);
+        color: var(--xc-common-white);
+    }
+
+    & .xc-gallery-one__filter li .filter-text {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-service-details__right {
+        background-color: transparent;
+    }
+
+    & .xc-breadcrumb__list {
+        color: var(--xc-common-white);
+
+        & .dvdr {
+            color: var(--xc-common-white);
+        }
+
+        & a {
+            color: var(--xc-common-white);
+
+            &:hover {
+                color: var(--xc-theme-primary);
+            }
+        }
+    }
+
+    & .xc-postbox__comment-box,
+    & .xc-sidebar__wrapper,
+    & .xc-cta-four__box {
+        background-color: #181d2d;
+    }
+
+    & .xc-google-map__one {
+        filter: grayscale(1);
+    }
+
+    & .tagcloud a,
+    & .catscloud a {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-sidebar__widget ul li a {
+        color: var(--xc-common-white);
+
+        &:hover {
+            color: var(--xc-theme-primary);
+        }
+    }
+
+    & .xc-postbox__comment-agree label,
+    & .xc-postbox__tags span,
+    & .xc-postbox__cats span {
+        color: var(--xc-common-white);
+    }
+
+    & .xc-about-four__tag a {
+        background-color: #181d2d;
+    }
+
+    & .xc-header-banner-three__shapes .shape-4 {
+        display: none;
+    }
+
+
+    // custom wp
+    .xc-sidebar__widget-wrapper .widget_block.xc-sidebar__widget ul li a,
+    .wp-block-tag-cloud a {
+        color: var(--xc-common-white);
+
+        &:hover {
+            color: var(--xc-common-white) !important;
+        }
+    }
+
+    .xc-sidebar__widget-wrapper .widget_block.xc-sidebar__widget ul li a {
+        color: var(--xc-common-white);
+
+        &:hover {
+            color: var(--xc-theme-primary) !important;
+        }
+    }
+
+    .xc-postbox__comment-text a {
+        color: var(--xc-common-white);
+    }
+    .xc-cta-four__box,
+    .xc-service-one__box {
+        box-shadow: 0px 0px 250px rgba(78, 67, 250, 0.01);
+
+        &:hover {
+            box-shadow: 0px 0px 250px rgba(78, 67, 250, 0.36);
+        }
+    }
+    .xc-postbox__item.xc-grid,
+    .xc-price-one__item,
+    .xc-accrodion {
+        box-shadow: 0px 0px 250px rgba(78, 67, 250, 0.01);
+    }
+   
+    & .xc-header-banner-2__bottom p{
+        margin-bottom: 0;
+    }
+    .xc-video-btn i {
+        background-color: var(--xc-common-white);
+        color: var(--xc-theme-primary);
+        &:hover{
+            color: var(--xc-common-white);
+            background-color: var(--xc-theme-primary);
+        }
+    }
+    .xc-header-transparen .xc-header-one__main {
+        background: RGBA(14, 20, 36, var(--bs-bg-opacity, 1)) !important;
+    }
+}

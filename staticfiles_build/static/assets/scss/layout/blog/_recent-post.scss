@@ -1,0 +1,45 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Recent Post css
+/*----------------------------------------*/
+.rc{
+    &__post{
+        + .rc__post {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--xc-border-1);
+        }
+        &-thumb{
+            & img{
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+                object-fit: cover;
+                margin-right: 15px;
+            }
+        }
+        &-title{
+            margin-bottom: 6px;
+            font-size: 17px;
+            & a{
+                transition: .3s;
+                &:hover{
+                    color: var(--xc-theme-primary);
+                }
+            }
+        }
+    }
+    &__meta{
+        & span{
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            & i {
+                font-weight: 500;
+                color: var(--xc-theme-primary);
+                margin-right: 5px;
+            }
+        }
+    }
+}

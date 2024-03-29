@@ -1,0 +1,274 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Classes
+---------------------------------*/
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+
+.fix {
+	overflow: hidden
+}
+
+.clear {
+	clear: both;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.z-index-11 {
+	z-index: 11;
+}
+
+.list-unstyled {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.overflow-y-visible {
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.p-relative {
+	position: relative;
+}
+
+.p-absolute {
+	position: absolute;
+}
+
+.include-bg {
+	@include background();
+}
+
+
+// demo for method
+.demo {
+	@include xc-transition(color, .3s, linear);
+
+	@include xc-transition-mul((color .3s linear, transform .2s ease));
+
+	@include rtl {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+
+	@include xc-root('div') {
+		img {
+			margin-left: 10px;
+		}
+	}
+
+	@include dark {
+		color: yellow;
+	}
+}
+
+
+/*----------------------------------------
+    Body Overlay 
+-----------------------------------------*/
+
+.body-overlay {
+	background-color: var(--xc-common-black);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include xc-transition();
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.body-overlay.opened {
+	opacity: .5;
+	visibility: visible;
+}
+
+
+.xc-header-one__logo {
+	max-width: 156px;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+
+/* dropcap */
+.xc-dropcap {
+	&::first-letter {
+		font-size: 50px;
+		font-weight: 700;
+		float: left;
+		text-align: center;
+		color: var(--xc-common-black);
+		background-color: var(--xc-common-white);
+		box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+		margin-right: 5px;
+		line-height: inherit;
+	}
+}
+
+// for svg
+// on hover stroke animation
+// not checked
+.class {
+	stroke-dasharray: 189px, 191px;
+	stroke-dashoffset: 0px;
+}
+
+.xc-preloader {
+	position: fixed;
+	background-color: var(--xc-common-white);
+	background-position: center center;
+	background-repeat: no-repeat;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+}
+
+.xc-preloader__image {
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: flipInY;
+	animation-name: flipInY;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100px auto;
+	width: 100%;
+	height: 100%;
+
+	@media #{$xs} {
+		background-size: 50px auto;
+	}
+}
+
+.xc-enable-dark {
+	display: none;
+}
+
+.xc-dark-swich {
+
+	// display: none;
+	& i {
+		width: 46px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+		border-radius: 50%;
+		transition: .3s;
+
+		&.sun {
+			display: none;
+		}
+	}
+
+}
+
+.xc-dark-mode .xc-dark-swich {
+
+	& i {
+		width: 46px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+		border-radius: 50%;
+
+		&.sun {
+			display: inline-block;
+		}
+
+		&.moon {
+			display: none;
+		}
+	}
+}
+
+.xc-mobile-nav__content .logo-box a h1 {
+	color: var(--xc-common-white);
+}
+
+.xc-mobile-nav__social a {
+	display: inline-block;
+}
+
+.xc-feature-five__section .item+.item {
+	margin-left: 40px;
+}
+
+.xc-featrue-five__warapper {
+	padding-left: 100px;
+	padding-right: 100px;
+
+	@media #{$sm,$xs,$md} {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+.xc-feature-five__section .xc-section__title {
+	font-size: 36px;
+}
+
+.elementor .xc-header-banner__img img {
+	border-radius: 30px;
+}
+
+.xc-about-one__feature-list .xc-icon {
+	width: 25px;
+	height: 25px;
+}
+
+.xc-brand-one__item {
+	text-align: center;
+	padding: 30px;
+	border-radius: 10px;
+}
+.xc-brand-one__item img {
+	width: 100%;
+}
+
+
+.xc-header-banner-2__bottom img {
+	margin-right: 20px;
+}
+
+.xc-about-six__list li::before {
+	top: 5px;
+}
+
+.xc-header-banner__bg {
+	left: 0;
+	right: 0;
+}

@@ -1,0 +1,51 @@
+@use '../utils' as *;
+/*--------------------------------------------------------------
+# Breadcrumb
+------------------- -------------------------------------------*/
+.xc-breadcrumb {
+    &__area{
+        padding-top: 200px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    &__overlay{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($color: #0c1a21, $alpha: .5);
+            z-index: 2;
+        }
+    }
+    &__title{
+        color: var(--xc-common-black);
+        font-size: 48px;
+    }
+    &__list {
+        color: var(--xc-common-black); 
+        & .dvdr {
+            color: var(--xc-common-black); 
+            padding-left: 5px;
+            padding-right: 5px;
+
+        }
+        & a {
+            color: var(--xc-common-black);
+            transition: .3s;
+            &:hover{
+                color: var(--xc-theme-primary);
+            }
+        }
+    }
+}

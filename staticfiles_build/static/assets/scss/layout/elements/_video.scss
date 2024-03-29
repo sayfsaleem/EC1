@@ -1,0 +1,85 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Video css
+/*----------------------------------------*/
+
+.xc-video-two {
+
+    &__left {
+        position: relative;
+        margin-top: 70px;
+        & .img-1 {
+            & img {
+                @media #{$xs,$md,$sm} {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transform: translateY(-50%);
+        & a {
+            font-size: 16px;
+            width: 66px;
+            height: 66px;
+            line-height: 66px;
+            border-radius: 66%;
+            display: inline-block;
+            background-color: var(--xc-common-white);
+            transition: .3s;
+            animation: pulse 2s infinite;
+            &:hover{
+                background-color: var(--xc-theme-primary);
+                color: var(--xc-common-white);
+            }
+        }
+    }
+
+    &__shapes {
+        & .shape-1 {
+            position: absolute;
+            top: -50px;
+            left: -100px;
+            z-index: 1;
+            animation: xc-moveY 8s infinite;
+            @media #{$xs,$md,$sm} {
+                display: none;
+            }
+        }
+
+        & .shape-2 {
+            position: absolute;
+            top: -150px;
+            right: 10px;
+            z-index: 1;
+            animation: xc-moveX 8s infinite;
+            @media #{$xs,$md,$sm} {
+                display: none;
+            }
+        }
+
+        & .shape-3 {
+            position: absolute;
+            top: 0;
+            left: -50px;
+            z-index: -1;
+            animation: xc-zoom 8s infinite;
+        }
+
+        & .shape-4 {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            z-index: -1;
+            animation: xc-zoom 11s infinite;
+        }
+    }
+}

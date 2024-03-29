@@ -1,0 +1,42 @@
+@use '../utils' as *;
+/*--------------------------------------------------------------
+#  Pagination
+------------------- -------------------------------------------*/
+.xc-pagination {
+	margin-top: 30px;
+	& ul {
+		padding-left: 0;
+		margin-bottom: 0;
+
+		& li {
+			display: inline-block;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	& a,
+	& span {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		line-height: 46px;
+		text-align: center;
+		border-radius: 7px;
+		border: 2px solid #f1f1f1;
+		font-size: 18px;
+		font-weight: 600;
+		transition: .3s;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&:hover,
+		&.current {
+			background: var(--xc-theme-primary);
+			border-color: var(--xc-theme-primary);
+			color: var(--xc-common-white);
+		}
+	}
+}
